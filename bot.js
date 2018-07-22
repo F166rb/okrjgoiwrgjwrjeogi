@@ -1090,20 +1090,6 @@ bot invite link : Soon
 
 
 
-//منع نشر روابط
-
-
-client.on('message', msg => {
-  const DiscordLink = ["discord.gg", "discordapp.com/invite", "gg", "discord.gg"];
-  if( DiscordLink.some(word => msg.content.includes(word)) ) {
-    msg.reply(`⛔ | يمنع نشر روابط الدعوة .. انتبه لنفسك`)
-    msg.delete();
-
-}
-})
-
-
-
 
 
 
