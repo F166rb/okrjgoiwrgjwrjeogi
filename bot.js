@@ -762,7 +762,7 @@ const zead = [
    '*** انتظر الجزء الثاني عندما يوصل البوت 100 سيرفر , ساعدني في نشر البوت وادخل هذا السيرفر  ***'
 ]
  client.on('message', message => {
- if (message.content.startsWith('+مريم')) {
+ if (message.content.startsWith('-مريم')) {
   var mariam= new Discord.RichEmbed()
   .setTitle("لعبة مريم ..")
   .setColor('RANDOM')
@@ -775,7 +775,7 @@ const zead = [
 
 
 client.on('message', function(message) {
-  var prefix = '+';
+  var prefix = '-';
     if(message.content.startsWith(prefix + 'قرعه')) {
         let args = message.content.split(" ").slice(1);
         if (!args[0]) {
@@ -818,7 +818,7 @@ const kingmas = [
    '*** روح اكل ملح + ليمون اذا مافيه اكل اي شيء من اختيار الي معك.  ***'
 ]
  client.on('message', message => {
-   var prefix = '+';
+   var prefix = '-';
  if (message.content.startsWith(prefix + 'حكم')) {
   var mariam= new Discord.RichEmbed()
   .setTitle("لعبة حكم ..")
