@@ -416,9 +416,20 @@ client.on('message', message => {
 
 
 
+// كود ان الشخص يرسل امر ويجيه الرد في الخاص 
 
-
-
+   client.on("message", message => {
+ if (message.content === "رابط") {
+     message.channel.send('**تم آرسال الرابط في الخاص .  ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("#000000")
+      .setDescription(`
+By Yazeed.
+`)
+   message.author.sendEmbed(embed)
+    
+   }
+   }); 
 
 
 
