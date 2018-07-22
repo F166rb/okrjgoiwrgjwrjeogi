@@ -316,34 +316,13 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" Done | تــــم" , " |  تــــم ارســاله لك في الخــاص")
+  .addField(" Done | تــــم" , " |  تــــم ارســالك في الخــاص")
      
      
      
   message.channel.sendEmbed(embed);
     }
 });
-
-
-
-
-
-
-
-
-// بوت يعلمني اذا احد ضاف البوت حقي 
-
- client.on('guildCreate', guild => {
-  client.channels.get("ايدي الروم").send(`**تم اضافة البوت في سيرفر جديد مبروكك
-اسم السيرفر: __${guild.name}__
-اونر السيرفر: __${guild.owner}__**`)
-}); 
-
-
-
-
-
-
 
 
 
@@ -437,20 +416,9 @@ client.on('message', message => {
 
 
 
-// كود ان الشخص يرسل امر ويجيه الرد في الخاص 
 
-   client.on("message", message => {
- if (message.content === "رابط") {
-     message.channel.send('**تم آرسال الرابط في الخاص .  ');
-  const embed = new Discord.RichEmbed() 
-      .setColor("#000000")
-      .setDescription(`
-By Yazeed.
-`)
-   message.author.sendEmbed(embed)
-    
-   }
-   }); 
+
+
 
 
 
@@ -1123,6 +1091,17 @@ bot invite link : Soon
 
 
 //منع نشر روابط
+
+
+client.on('message', msg => {
+  const DiscordLink = ["discord.gg", "discordapp.com/invite", "gg", "discord.gg"];
+  if( DiscordLink.some(word => msg.content.includes(word)) ) {
+    msg.reply(`⛔ | يمنع نشر روابط الدعوة .. انتبه لنفسك`)
+    msg.delete();
+
+}
+})
+
 
 
 
@@ -1820,9 +1799,62 @@ client.on('message', function(message) {
     }
 });
 
+// كود يعلمني اذا احد دخل البوت بسيرفره
+ client.on('guildCreate', guild => {
+  client.channels.get("ايدي الروم").send(`**تم اضافة البوت في سيرفر جديد مبروكك
+اسم السيرفر: __${guild.name}__
+اونر السيرفر: __${guild.owner}__**`)
+}); 
 
 
 
+
+
+// كود الستريمنج المتغير .
+
+client.on('ready', function(){
+    var ms = 10000 ;
+    var setGame = [' سوف ','يتم ','اطلاق  ','البوت','قريبًا .. Soon'];
+    var i = -1;
+    var j = 0;
+    setInterval(function (){
+        if( i == -1 ){
+            j = 1;
+        }
+        if( i == (setGame.length)-1 ){
+            j = -1;
+        }
+        i = i+j;
+        client.user.setGame(setGame[i],`http://www.twitch.tv/D.JPEI`);
+    }, ms);
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+// كود ان الشخص يرسل امر ويجيه الرد في الخاص .
+   client.on("message", message => {
+ if (message.content === "$الامر") {
+     message.channel.send('**شوف خاصك ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("#000000")
+      .setDescription(`
+هاي
+`)
+   message.author.sendEmbed(embed)
+    
+   }
+   }); 
 
 
    
