@@ -316,13 +316,34 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" Done | تــــم" , " |  تــــم ارســالك في الخــاص")
+  .addField(" Done | تــــم" , " |  تــــم ارســاله لك في الخــاص")
      
      
      
   message.channel.sendEmbed(embed);
     }
 });
+
+
+
+
+
+
+
+
+// بوت يعلمني اذا احد ضاف البوت حقي 
+
+ client.on('guildCreate', guild => {
+  client.channels.get("ايدي الروم").send(`**تم اضافة البوت في سيرفر جديد مبروكك
+اسم السيرفر: __${guild.name}__
+اونر السيرفر: __${guild.owner}__**`)
+}); 
+
+
+
+
+
+
 
 
 
