@@ -174,7 +174,7 @@ client.on('message', message => {
 
 const child_process = require("child_process");
 const adminprefix = "-!-";
-const devs = ['396958215377780747'];
+const devs = ['355101114024329227'];
 
 client.on('message', message => {
 if(message.content === adminprefix + "restart-x") {
