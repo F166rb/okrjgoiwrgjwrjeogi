@@ -34,7 +34,6 @@ client.on('message', msg => {
 const fs = require("fs"); //npm i fs
 const Canvas = require("canvas");//for linux = npm i canvas | for windows = npm i canvas-prebuilt
 const jimp = require("jimp");// npm i jimp
-const prefix = "-"; // prefix
 const id = JSON.parse(fs.readFileSync("./id/mozo.json", "utf8"));
 client.on("message", message => {
   if (message.author.bot) return;
@@ -60,7 +59,7 @@ if (err) console.error(err);
     client.on("message", message => {
   if (message.author.bot) return;
     if(!message.channel.guild) return;
-if (message.content.startsWith(prefix + "id")) {
+if (message.content.startsWith(prefix + "id2")) {
                                let user = message.mentions.users.first();
          var human = message.mentions.users.first();
             var author;
