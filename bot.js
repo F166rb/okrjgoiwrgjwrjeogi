@@ -3724,7 +3724,7 @@ client.on('message', message => {
 
   let args = message.content.split(" ").slice(1);
 
-  if (command == "!باند") {
+  if (command == "-ban") {
                if(!message.channel.guild) return message.reply('** This command only for servers**');
          
   if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**انت لا تملك الصلاحيات المطلوبه**");
@@ -3745,7 +3745,7 @@ message.channel.send(`**:white_check_mark: ${user.tag} banned from the server ! 
   
  client.on('message', async message => {
   let args = message.content.split(" ");
-  if(message.content.startsWith(prefix + "ميوت")) {
+  if(message.content.startsWith(prefix + "mute")) {
     if(!message.member.hasPermission("MANAGE_ROLES")) return message.reply('**أنت لا تملك الخصائص اللازمة . يجب توفر خاصية `Manage Roles`**').then(msg => {
       msg.delete(3500);
       message.delete(3500);
@@ -3854,7 +3854,7 @@ message.channel.send(`**:white_check_mark: ${user.tag} banned from the server ! 
     let toKick = message.mentions.users.first();
     let toReason = message.content.split(" ").slice(2).join(" ");
     let toEmbed = new Discord.RichEmbed()
-   if(message.content.startsWith(prefix + 'طرد')) {
+   if(message.content.startsWith(prefix + 'kick')) {
        if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply('**# - You dont have enough permissions!**');
        if(toKick.bannable) return message.reply("**# - I cannot kick someone with a higher role than me!**");
        if(!toReason) return message.reply("**# - Supply a reason!**")
