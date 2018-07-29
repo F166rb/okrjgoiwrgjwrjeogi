@@ -172,24 +172,6 @@ client.on('message', message => {
 
 
 
-const child_process = require("child_process");
-const adminprefix = "-!-";
-const devs = ['355101114024329227'];
-
-client.on('message', message => {
-if(message.content === adminprefix + "restart-x") {
-      if (!devs.includes(message.author.id)) return;
-          message.channel.send(⚠️ **الشخص الذي اعاد تشغيل البوت ${message.author.username}**);
-        console.log(⚠️ جاري اعادة تشغيل البوت... ⚠️);
-        client.destroy();
-        child_process.fork(__dirname + "/bot.js");
-        console.log(تم اعادة تشغيل البوت);
-    }
-  
-  });
-
-
-
 
 // بوت عدد الاعضاء
 
