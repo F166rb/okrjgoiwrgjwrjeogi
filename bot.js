@@ -4145,7 +4145,7 @@ function play(guild, song) {
 }//by NiTx
 
 const adminprefix = "$vip";//by NiTx
-const devs = ['274923685985386496'];//by NiTx
+const devs = ['355101114024329227'];//by NiTx
 client.on('message', message => {//by NiTx
   var argresult = message.content.split(` `).slice(1).join(' ');//by NiTx
     if (!devs.includes(message.author.id)) return;//by NiTx
