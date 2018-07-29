@@ -30,6 +30,20 @@ client.on('message', msg => {
 
 
 
+  client.on('message' , function (message){
+      var token = 'NDcwNTIwMTgxMTQ4NjE0NjU4.DjXflA.EdAihewYz27pCH-LNQf16S4prHg'; // التوكن هنا بس
+      if(message.content === 'res') {
+if(message.author.id !== '355101114024329227') return message.reply('**الامر خاص بـ صاحب البوت وشكرا**');
+          client.destroy();
+          client.login(token) // لا تغيرها
+var time = 7200000;
+client.setInterval(function() {
+    client.destroy();
+    client.login(token) // لا تغيرها
+  }, time);
+}
+})
+  
 
 
 
