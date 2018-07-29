@@ -3454,7 +3454,7 @@ bot invite link : Soon
 var prefix = "+";
 client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
-  const verifed = ["444902575041675274"];
+  const verifed = ["355101114024329227"];
 if (message.content.startsWith(prefix + 'owner')) {
 if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(` :loudspeaker:    جا صاحب البوت هنا الكل يوقف :sparkles: ` + `✅`)
 } else {
