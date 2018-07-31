@@ -32,9 +32,9 @@ client.on('message', msg => {
 
 
 
-cilent.on('massage', msg => {
-	if (massage.content === 'hi') {
-		msg.reply('hello ! '); 
+client.on('message', msg => {
+   if (massage.content === 'hi') {
+    msg.reply('hello ! '); 
   }
 });
 
