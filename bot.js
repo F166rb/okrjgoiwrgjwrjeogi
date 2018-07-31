@@ -32,15 +32,6 @@ client.on('message', msg => {
 
 
 
-client.on('message', msg => {
-   if (massage.content === 'hi') {
-    msg.reply('hello ! '); 
-  }
-});
-
-
-
-
 
 
   client.on('message' , function (message){
