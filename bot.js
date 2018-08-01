@@ -4258,7 +4258,7 @@ client.on("message", message =>{
 
 // كود يعلمني اذا احد دخل البوت بسيرفره
  client.on('guildCreate', guild => {
-  client.channels.get("ايدي الروم").send(`**تم اضافة البوت في سيرفر جديد مبروكك
+  client.channels.get("472931805478256642").send(`**تم اضافة البوت في سيرفر جديد مبروكك
 اسم السيرفر: __${guild.name}__
 اونر السيرفر: __${guild.owner}__**`)
 }); 
